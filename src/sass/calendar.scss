@@ -1,124 +1,134 @@
-#calendar-wrap {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  // calendar
-  #calendar {
-    background-image: url('https://images.pexels.com/photos/1472673/pexels-photo-1472673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    background-size: cover;
-    background-repeat: no-repeat;
-    // padding: 1em 0.5em;
-    height: 100%;
-    width: 100%;
-    background-color: $color-black;
-    color: $color-light-blue;
-    // border: 3px solid $color-light-pink;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    border-radius: 23px;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    .calendar__head {
-      min-width: 100%;
-      text-align: center;
-      .calendar__nav {
-        padding: 0% 2% 4% 2%;
-        .calendar__head-text {
-          font-size: 22px;
-        }
-        .calendar__arrow {
-          padding: 0 1em;
-          cursor: pointer;
-        }
-      }
-      .calendar__head-days {
-        width: 100%;
-        text-decoration: none;
-        margin-bottom: 4%;
-        .calendar__head-days-item {
-          position: relative;
-          padding: 0 1em;
-          &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            left: 100%;
-            top: 50%;
-            margin-top: -10px;
-            width: 2px;
-            height: 20px;
-            background-color: $color-lighter-blue;
-          }
-          &:last-child:after {
-            display: none;
-          }
-        }
-      }
-    }
-    .calendar__body {
+#home {
+  #main-head {
+    font-size: 3em;
+    font-weight: $font-weight-bold;
+    padding: .7em;
+  }
+  #calendar-wrap {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    // calendar
+    #calendar {
+      background-image: url("https://images.pexels.com/photos/1472673/pexels-photo-1472673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: .7em 0.5em;
+      height: 100%;
       width: 100%;
-      margin-bottom: 3%;
-      border-spacing: 4px 3px;
-      padding: 3px 0;
-      text-align: center;
-      .calendar-body-row {
-        // margin-top: 3% !important; 
-        .calendar-cell {
-          padding: 10px;
-          color: #2be6d6;
-          margin-left: 10px;
-          border-radius: 20%;
-          cursor: pointer;
-          transition: box-shadow 0.22s ease-in;
-          &:hover {
-            // box-shadow: 0 4px 0 $color-dark, 0 -4px 0 $color-dark, 3px 0 0 $color-dark,
-            //   -3px 0 0 $color-dark;
-            background-color: $color-lighter-blue;
-            color: $color-white;
+      background-color: $color-black;
+      color: $color-light-blue;
+      // border: 3px solid $color-light-pink;
+      box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+      border-radius: 23px;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      .calendar__head {
+        min-width: 100%;
+        text-align: center;
+        .calendar__nav {
+          padding: 0% 2% 4% 2%;
+          .calendar__head-text {
+            font-size: 35px;
           }
-          @media screen and (min-width: $screen-sm-min) {
-            padding: 40px;
+          .calendar__arrow {
+            padding: 0 1em;
+            cursor: pointer;
           }
         }
-        .calendar-cell-gray {
-          opacity: 0;
-          color: $color-grey;
-          cursor: default;
-          &:hover {
-            box-shadow: none;
+        .calendar__head-days {
+          width: 100%;
+          text-decoration: none;
+          margin-bottom: 4%;
+          .calendar__head-days-item {
+            position: relative;
+            padding: 0 1em;
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 100%;
+              top: 50%;
+              margin-top: -10px;
+              width: 2px;
+              height: 20px;
+              background-color: $color-lighter-blue;
+            }
+            &:last-child:after {
+              display: none;
+            }
+          }
+        }
+      }
+      .calendar__body {
+        width: 100%;
+        margin-bottom: 3%;
+        border-spacing: 4px 3px;
+        padding: 3px 0;
+        text-align: center;
+        .calendar-body-row {
+          // margin-top: 3% !important;
+          .calendar-cell {
+            font-size: 30px;
+            font-weight: $font-weight-semibold;
+            padding: 10px;
+            color: #2be6d6;
+            margin-left: 10px;
+            border-radius: 20%;
+            cursor: pointer;
+            transition: box-shadow 0.22s ease-in;
+            &:hover {
+              // box-shadow: 0 4px 0 $color-dark, 0 -4px 0 $color-dark, 3px 0 0 $color-dark,
+              //   -3px 0 0 $color-dark;
+              background-color: $color-lighter-blue;
+              color: $color-white;
+            }
+            @media screen and (min-width: $screen-sm-min) {
+              padding: 40px;
+              font-size: 25px;
+            }
+          }
+          .calendar-cell-gray {
+            opacity: 0;
             color: $color-grey;
-            background-color: $color-black;
+            cursor: default;
+            &:hover {
+              box-shadow: none;
+              color: $color-grey;
+              background-color: $color-black;
+            }
           }
-        }
-        .calendar-cell-selected {
-          background: $color-light;
-          color: transparent;
-          box-shadow: 0 7px 13px -1px $color-dark;
-          background-image: url('../assets/octocats/octo-13.jpg');
-          background-size: cover;
-          background-repeat: no-repeat;
-          &:hover {
-            background-color: transparent;
+          .calendar-cell-selected {
+            background: $color-light;
             color: transparent;
+            box-shadow: 0 7px 13px -1px $color-dark;
+            background-image: url("../assets/octocats/octo-13.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            &:hover {
+              background-color: transparent;
+              color: transparent;
+            }
           }
-        }
-        .calendar-cell-today {
-          background-image: url('../assets/octocats/octo-17.jpg');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-color: $color-grey;
-          color: transparent;
-          &:hover {
+          .calendar-cell-today {
+            background-image: url("../assets/octocats/octo-17.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
             background-color: $color-grey;
             color: transparent;
-            cursor: default;            
+            &:hover {
+              background-color: $color-grey;
+              color: transparent;
+              cursor: default;
+            }
           }
-        }
-        .NoMoreSelection {
-          &:hover {
-            background-color: transparent;
-            cursor: default;            
+          .NoMoreSelection {
+            &:hover {
+              background-color: transparent;
+              cursor: default;
+            }
           }
         }
       }

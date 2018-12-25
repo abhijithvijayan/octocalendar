@@ -1,9 +1,9 @@
 {
-  "name": "octo-calendar",
+  "name": "octo-catlendar",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "author": "abhijithvijayan",
-  "description": "octo calendar",
+  "description": "octo catlendar",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
