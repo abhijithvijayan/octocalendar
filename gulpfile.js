@@ -16,7 +16,7 @@ const cleanCSS = require("gulp-clean-css");
 const imagemin = require("gulp-imagemin");
 
 // style paths
-var sass_src = "./src/sass/*.scss",
+var sass_src = "./src/sass/main.scss",
   img_src = "./src/assets/**/",
   js_src = "./src/*.js",
   html_src = "./src/*.html",
