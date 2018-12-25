@@ -4,12 +4,16 @@
   align-content: center;
   // calendar
   #calendar {
-    padding: 1em 0.5em;
+    background-image: url('https://images.pexels.com/photos/1472673/pexels-photo-1472673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-repeat: no-repeat;
+    // padding: 1em 0.5em;
     height: 100%;
     width: 100%;
     background-color: $color-black;
     color: $color-light-blue;
-    border: 3px solid $color-light-pink;
+    // border: 3px solid $color-light-pink;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     border-radius: 23px;
     user-select: none;
     -webkit-user-select: none;
@@ -19,10 +23,6 @@
       min-width: 100%;
       text-align: center;
       .calendar__nav {
-        display: flex;
-        justify-content: space-between;
-        -ms-align-items: center;
-        align-items: center;
         padding: 0% 2% 4% 2%;
         .calendar__head-text {
           font-size: 22px;
@@ -65,6 +65,7 @@
       .calendar-body-row {
         // margin-top: 3% !important; 
         .calendar-cell {
+          padding: 40px;
           color: #2be6d6;
           margin-left: 10px;
           border-radius: 20%;
@@ -78,6 +79,7 @@
           }
         }
         .calendar-cell-gray {
+          opacity: 0;
           color: $color-grey;
           cursor: default;
           &:hover {
@@ -87,18 +89,27 @@
           }
         }
         .calendar-cell-selected {
-          border-radius: 9px;
           background: $color-light;
           color: $color-black;
           box-shadow: 0 7px 13px -1px $color-dark;
+          background-image: url('https://octodex.github.com/images/snowtocat_final.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
         }
-        .noMoreSelection, .calendar-cell-today {
+        .calendar-cell-today {
+          background-image: url('https://octodex.github.com/images/mona-lovelace.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
           background-color: $color-grey;
-          border-radius: 0;
           color: $color-white;
           &:hover {
             background-color: $color-grey;
-            box-shadow: none;
+            cursor: default;            
+          }
+        }
+        .NoMoreSelection {
+          &:hover {
+            background-color: transparent;
             cursor: default;            
           }
         }

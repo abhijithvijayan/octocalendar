@@ -14,9 +14,11 @@ const uglify = require("gulp-uglify");
 const pump = require("pump");
 const cleanCSS = require("gulp-clean-css");
 const imagemin = require("gulp-imagemin");
+sass.compiler = require('node-sass');
 
 // style paths
 var sass_src = "./src/sass/main.scss",
+  sass_files = "./src/sass/*.scss",
   img_src = "./src/assets/**/",
   js_src = "./src/*.js",
   html_src = "./src/*.html",
@@ -67,7 +69,7 @@ gulp.task("build-sass", () => {
     .src(sass_src)
     .pipe(sourcemaps.init())
     .pipe(autoprefixer())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(concat("style.css"))
     .pipe(sourcemaps.write())
     .pipe(cleanCSS({ compatibility: "ie8" }))
@@ -174,7 +176,7 @@ gulp.task("delete-assets", () => {
 
 // watching scss/js/html files
 gulp.task("watch", function(done) {
-  gulp.watch(sass_src, gulp.series("live-reload"));
+  gulp.watch(sass_files, gulp.series("live-reload"));
   gulp.watch("./src/*.js", gulp.series("live-reload"));
   gulp.watch(html_src).on(
     "change",
