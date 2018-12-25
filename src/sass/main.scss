@@ -1,0 +1,12 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+@import "fonts";
+@import "variables";
+
+@import "calendar";
+
+body {
+    color: $color-white;
+    background: $color-black;
+    font-family: $font-family-poppins;
+}
