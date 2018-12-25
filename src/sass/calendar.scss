@@ -65,7 +65,7 @@
       .calendar-body-row {
         // margin-top: 3% !important; 
         .calendar-cell {
-          padding: 40px;
+          padding: 10px;
           color: #2be6d6;
           margin-left: 10px;
           border-radius: 20%;
@@ -76,6 +76,9 @@
             //   -3px 0 0 $color-dark;
             background-color: $color-lighter-blue;
             color: $color-white;
+          }
+          @media screen and (min-width: $screen-sm-min) {
+            padding: 40px;
           }
         }
         .calendar-cell-gray {
@@ -90,20 +93,25 @@
         }
         .calendar-cell-selected {
           background: $color-light;
-          color: $color-black;
+          color: transparent;
           box-shadow: 0 7px 13px -1px $color-dark;
           background-image: url('../assets/octocats/octo-13.jpg');
           background-size: cover;
           background-repeat: no-repeat;
+          &:hover {
+            background-color: transparent;
+            color: transparent;
+          }
         }
         .calendar-cell-today {
           background-image: url('../assets/octocats/octo-17.jpg');
           background-size: cover;
           background-repeat: no-repeat;
           background-color: $color-grey;
-          color: $color-white;
+          color: transparent;
           &:hover {
             background-color: $color-grey;
+            color: transparent;
             cursor: default;            
           }
         }
