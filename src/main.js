@@ -1,5 +1,4 @@
-var total_days;
-
+var total_days, calendar_date, random_num, ext, today_date, random_val;
 
 class Calendar {
   constructor(id) {
@@ -103,9 +102,9 @@ class Calendar {
         from: "next month"
       };
       i++;
-	}
+    }
 
-	total_days = current_month_last_day;
+    total_days = current_month_last_day;
 
     return days_array;
   }
@@ -130,20 +129,26 @@ class Calendar {
         if (days_array[i].from !== "current month") {
           td.classList.add("calendar-cell-gray");
         } else {
-          if (
-            current_month &&
-            this.selected_date.getDate() == days_array[i].number
-          ) {
-            td.classList.add("calendar-cell-selected");
-            td.id = "selected_date";
+          // if (current_month && this.selected_date.getDate() == days_array[i].number ) {
+          //   td.classList.add("calendar-cell-selected");
+          //   td.id = "selected_date";
+          // }
+
+          // if (days_array[i].weekend) td.classList.add("calendar-cell-green");
+
+          if (current_month && this.current_day == days_array[i].number) {
+            td.classList.add("calendar-cell-today");
+
+            random_val = Math.floor(Math.random() * 25 + 1);
+
+            if (oddEven(random_val) == 0) ext = ".png";
+            else ext = ".jpg";
+
+            // today_date = document.querySelector(".calendar-cell-today");
+            td.style.backgroundImage =
+              "url(../assets/octocats/octo-" + random_val + ext;
           }
 
-          if (days_array[i].weekend) td.classList.add("calendar-cell-green");
-
-		  if (current_month && this.current_day == days_array[i].number) {
-            td.classList.add("calendar-cell-today");
-		  }
-		  
           if (current_month && this.current_day < days_array[i].number) {
             td.classList.add("NoMoreSelection");
           }
@@ -224,12 +229,14 @@ class Calendar {
   selectHandler(e) {
     if (e.target.classList.contains("calendar-cell-gray")) return; //only days of current month can be selected
     if (!e.target.classList.contains("calendar-cell")) return; //if it wasn't a click on a cell
-	if (e.target.classList.contains("NoMoreSelection")) return;
+    if (e.target.classList.contains("NoMoreSelection")) return;
+    if (e.target.classList.contains("calendar-cell-today")) return;
 
     let prev_selected = document.getElementById("selected_date");
     if (prev_selected) {
       prev_selected.classList.remove("calendar-cell-selected");
       prev_selected.id = "";
+      prev_selected.style = "";
     }
 
     this.selected_date = new Date(
@@ -240,7 +247,27 @@ class Calendar {
 
     e.target.id = "selected_date";
     e.target.classList.add("calendar-cell-selected");
+
+    random_num = Math.floor(Math.random() * 23 + 1);
+
+    if (random_num == random_val) {
+      ++random_num;
+    }
+
+    // console.log("val=" + random_val);
+    // console.log("num=" + random_num);
+
+    if (oddEven(random_num) == 0) ext = ".png";
+    else ext = ".jpg";
+
+    calendar_date = document.getElementById("selected_date");
+    calendar_date.style.backgroundImage =
+      "url(../assets/octocats/octo-" + random_num + ext;
   }
 }
+
+var oddEven = value => {
+  return value % 2;
+};
 
 const calendar = new Calendar("calendar-wrap");

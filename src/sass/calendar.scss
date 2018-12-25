@@ -92,12 +92,12 @@
           background: $color-light;
           color: $color-black;
           box-shadow: 0 7px 13px -1px $color-dark;
-          background-image: url('https://octodex.github.com/images/snowtocat_final.jpg');
+          background-image: url('../assets/octocats/octo-13.jpg');
           background-size: cover;
           background-repeat: no-repeat;
         }
         .calendar-cell-today {
-          background-image: url('https://octodex.github.com/images/mona-lovelace.jpg');
+          background-image: url('../assets/octocats/octo-17.jpg');
           background-size: cover;
           background-repeat: no-repeat;
           background-color: $color-grey;
