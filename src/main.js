@@ -146,7 +146,7 @@ class Calendar {
 
             // today_date = document.querySelector(".calendar-cell-today");
             td.style.backgroundImage =
-              "url(../assets/octocats/octo-" + random_val + ext;
+              "url(assets/octocats/octo-" + random_val + ext;
           }
 
           if (current_month && this.current_day < days_array[i].number) {
@@ -262,7 +262,7 @@ class Calendar {
 
     calendar_date = document.getElementById("selected_date");
     calendar_date.style.backgroundImage =
-      "url(../assets/octocats/octo-" + random_num + ext;
+      "url(assets/octocats/octo-" + random_num + ext;
   }
 }
 
