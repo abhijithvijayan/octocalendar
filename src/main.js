@@ -139,7 +139,7 @@ class Calendar {
           if (current_month && this.current_day == days_array[i].number) {
             td.classList.add("calendar-cell-today");
 
-            random_val = Math.floor(Math.random() * 25 + 1);
+            random_val = Math.floor(Math.random() * 24) + 1;
 
             if (oddEven(random_val) == 0) ext = ".png";
             else ext = ".jpg";
@@ -248,14 +248,14 @@ class Calendar {
     e.target.id = "selected_date";
     e.target.classList.add("calendar-cell-selected");
 
-    random_num = Math.floor(Math.random() * 23 + 1);
+    random_num = Math.floor(Math.random() * 23) + 1;
 
     if (random_num == random_val) {
       ++random_num;
     }
 
-    // console.log("val=" + random_val);
-    // console.log("num=" + random_num);
+    console.log("val=" + random_val);
+    console.log("num=" + random_num);
 
     if (oddEven(random_num) == 0) ext = ".png";
     else ext = ".jpg";
