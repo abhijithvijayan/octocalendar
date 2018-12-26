@@ -20,8 +20,9 @@ run
 
 run `gulp build` to build files
 
-## Note
+## Assets
 Octocat images are pulled from https://octodex.github.com/
+Snowstorm Effect from https://github.com/scottschiller/Snowstorm
 
 ## Licence
 Code released under the [MIT License](https://github.com/abhijithvijayan/octocatlendar/blob/master/LICENCE).

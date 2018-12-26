@@ -254,8 +254,8 @@ class Calendar {
       ++random_num;
     }
 
-    console.log("val=" + random_val);
-    console.log("num=" + random_num);
+    // console.log("val=" + random_val);
+    // console.log("num=" + random_num);
 
     if (oddEven(random_num) == 0) ext = ".png";
     else ext = ".jpg";
