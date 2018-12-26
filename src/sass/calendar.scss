@@ -1,16 +1,18 @@
 #home {
+  height: 100%;
   #main-head {
     font-size: 3em;
     font-weight: $font-weight-bold;
-    padding: .7em;
+    padding: .5em;
   }
   #calendar-wrap {
+    padding-bottom: 3em;
     display: grid;
     justify-content: center;
     align-content: center;
     // calendar
     #calendar {
-      background-image: url("https://images.pexels.com/photos/1472673/pexels-photo-1472673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/bg-img.jpeg");
       background-size: cover;
       background-repeat: no-repeat;
       padding: .7em 0.5em;
@@ -18,7 +20,6 @@
       width: 100%;
       background-color: $color-black;
       color: $color-light-blue;
-      // border: 3px solid $color-light-pink;
       box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
       border-radius: 23px;
       user-select: none;
@@ -32,10 +33,6 @@
           padding: 0% 2% 4% 2%;
           .calendar__head-text {
             font-size: 35px;
-          }
-          .calendar__arrow {
-            padding: 0 1em;
-            cursor: pointer;
           }
         }
         .calendar__head-days {
@@ -69,7 +66,6 @@
         padding: 3px 0;
         text-align: center;
         .calendar-body-row {
-          // margin-top: 3% !important;
           .calendar-cell {
             font-size: 30px;
             font-weight: $font-weight-semibold;
@@ -80,13 +76,11 @@
             cursor: pointer;
             transition: box-shadow 0.22s ease-in;
             &:hover {
-              // box-shadow: 0 4px 0 $color-dark, 0 -4px 0 $color-dark, 3px 0 0 $color-dark,
-              //   -3px 0 0 $color-dark;
               background-color: $color-lighter-blue;
               color: $color-white;
             }
             @media screen and (min-width: $screen-sm-min) {
-              padding: 40px;
+              padding: 28px;
               font-size: 25px;
             }
           }

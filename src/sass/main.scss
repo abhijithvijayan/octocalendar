@@ -7,6 +7,9 @@
 
 body {
     color: $color-white;
-    background: url('../assets/snowflakes_background.jpg');
+    background-image: url('../assets/snowflakes_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: $font-family-christmas;
+    line-height: 1;
 }
