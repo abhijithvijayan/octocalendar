@@ -1,4 +1,4 @@
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import "node_modules/bootstrap/scss/bootstrap";
 
 @import "fonts";
 @import "variables";
@@ -6,10 +6,15 @@
 @import "calendar";
 
 body {
-    color: $color-white;
-    background-image: url('../assets/snowflakes_background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: $font-family-christmas;
-    line-height: 1;
+  color: $color-white;
+  background-image: url("../assets/snowflakes_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: $font-family-christmas;
+  line-height: 1;
+  min-height: 100%;
+}
+
+html {
+  height: 100%;
 }
