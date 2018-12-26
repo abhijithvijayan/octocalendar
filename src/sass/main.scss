@@ -6,15 +6,19 @@
 @import "calendar";
 
 body {
+  min-height: 100%;
   color: $color-white;
-  background-image: url("../assets/snowflakes_background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   font-family: $font-family-christmas;
   line-height: 1;
-  min-height: 100%;
+  background-color: $color-black;
 }
 
 html {
   height: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }

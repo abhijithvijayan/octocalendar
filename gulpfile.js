@@ -202,7 +202,10 @@ gulp.task(
     browserSync.init({
       server: {
         baseDir: "./dist/"
-      }
+      },
+    online: true,
+    tunnel: true,
+    logLevel: "debug"
     });
   })
 );

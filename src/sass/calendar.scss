@@ -1,5 +1,8 @@
 #home {
-  height: 100vh;
+  background-image: url("../assets/snowflakes_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
   #main-head {
     font-size: 3em;
     font-weight: $font-weight-bold;
@@ -16,7 +19,6 @@
       background-size: cover;
       background-repeat: no-repeat;
       padding: .7em 0.5em;
-      height: 100%;
       width: 100%;
       background-color: $color-black;
       color: $color-light-blue;
